@@ -1,0 +1,31 @@
+# Downloaded clinical data and generated experiment artifacts stay local.
+/data/
+/downloads/
+/pretrained/
+/outputs/
+/environment-lock.txt
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.npz
+*.zip
+*.partial
+*.part
+*.log
+
+# Environments, credentials and editor files.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

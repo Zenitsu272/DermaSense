@@ -1,0 +1,14 @@
+{
+  "size": 320,
+  "batch_size": 8,
+  "seed": 1337,
+  "max_epochs": 20,
+  "backbone_lr": 1e-05,
+  "new_lr": 0.0001,
+  "weight_decay": 0.001,
+  "label_smoothing": 0.03,
+  "training_images": 479,
+  "starting_checkpoint": "479-image validation-selected seed 1337",
+  "selection": "validation accuracy, macro F1, lower log loss; single/four-view/50-50 multiresolution; final refit duration fixed from validation",
+  "test_accessed": false
+}

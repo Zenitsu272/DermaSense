@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "saved_metrics_recomputed": true,
+  "probabilities_valid": true,
+  "test_rows_and_labels_unchanged": true,
+  "development_test_patient_lesion_and_exact_image_overlap": false,
+  "model_and_source_hashes_verified": true,
+  "standalone_inference_agrees": true,
+  "correct_test_predictions": 84,
+  "test_images": 96
+}

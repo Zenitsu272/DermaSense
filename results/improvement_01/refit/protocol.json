@@ -1,0 +1,12 @@
+{
+  "seed": 1337,
+  "epochs": 27,
+  "batch_size": 16,
+  "training_images": 575,
+  "training_patients": 414,
+  "data": "original train + validation, original test excluded",
+  "epoch_selection": "best epoch from original validation-selected seed 1337; no new early stopping",
+  "lr_schedule": "replay fixed learning-rate schedule from the completed validation run",
+  "inference_tta": true,
+  "test_policy": "Previously evaluated 96-image benchmark; no test training or per-example tuning. Not independent external validation."
+}

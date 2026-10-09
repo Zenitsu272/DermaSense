@@ -1,0 +1,32 @@
+{
+  "test": {
+    "images": 96,
+    "patients": 68,
+    "classes": {
+      "SCC": 27,
+      "SEK": 34,
+      "NEV": 35
+    }
+  },
+  "val": {
+    "images": 96,
+    "patients": 68,
+    "classes": {
+      "SCC": 28,
+      "SEK": 33,
+      "NEV": 35
+    }
+  },
+  "train": {
+    "images": 479,
+    "patients": 346,
+    "classes": {
+      "SCC": 137,
+      "SEK": 168,
+      "NEV": 174
+    }
+  },
+  "method": "Seven stratified patient-group folds, seed=42: first fold test, second validation, five remaining training. Exact byte-identical images and patients sharing a bare lesion ID are conservatively grouped together. No score-based split selection.",
+  "unique_image_hashes": 669,
+  "patient_lesion_and_exact_duplicate_overlap": false
+}
