@@ -1,0 +1,6 @@
+{
+  "images": 575,
+  "patients": 414,
+  "base_sha256": "6cf83400d75f6ee9d8f40c51b719d2c4a016b92d898a6d5a2508be868a4b1557",
+  "validation_score": "None for refit; original validation rows are now training rows"
+}

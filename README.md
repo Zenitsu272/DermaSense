@@ -6,6 +6,8 @@ DermaSense is a PyTorch term project that combines a clinical photograph with st
 
 The project covers selective dataset download, integrity checks, patient-grouped splitting, clinical preprocessing, GPU training, validation-based model selection, inference and quantitative evaluation.
 
+**Follow-up experiment:** clinical late fusion, 66 classification-head candidates, stronger augmentation/mixup and an ensemble comparison were also tested. The selected follow-up reached 94.79% validation accuracy but only 86.46% test accuracy. It did not improve the previous 87.50% test result. The earlier model is preserved. See [the complete follow-up protocol and outcome](docs/clinical_fusion.md).
+
 **Measured test accuracy improved from 79.17% to 87.50% (84/96 images).** A separate model-selection experiment reached **93.75% validation accuracy**. The requested test target above 90% was not achieved. These numbers refer to different partitions and must not be interchanged.
 
 > Research prototype for three selected lesion categories. The same test partition was evaluated during successive development iterations; results are exploratory and require independent external confirmation. This is not a clinically validated diagnostic system.
@@ -167,6 +169,7 @@ All rows below use the same 96 test images from 68 patients. Full JSON metrics, 
 | Revised pretrained image path, validation-selected | 479 | 86.46% | 0.8687 | 0.9749 |
 | Revised 224px development refit | 575 | **87.50%** | **0.8758** | **0.9735** |
 | Progressive 320px development refit | 575 | **87.50%** | **0.8758** | **0.9613** |
+| Validation-selected clinical-fusion follow-up | 575 | 86.46% | 0.8639 | 0.9680 |
 
 The high-resolution refit made the same hard class predictions as the 224px refit, but its probabilities differed, resulting in different ROC-AUC values. Higher resolution improved model-selection validation accuracy without improving test classification accuracy. The 224px refit therefore remains a useful lower-cost alternative; both are preserved.
 
@@ -294,6 +297,10 @@ Improved inference scripts currently require CUDA. Each accepts `--checkpoint` t
 | `predict*.py` | Inference for the corresponding checkpoint formats |
 | `audit_results.py` | Recalculate saved metrics and check partition/model integrity |
 | `verify_install.py` | Dataset-free model contract and gradient checks |
+| `clinical_fusion.py` | Clinical probability fusion and regularized feature-head search |
+| `robust_finetune.py` | Stronger augmentation and mixup fine-tuning |
+| `ensemble_followup.py` | Validation comparison and final package refit/evaluation |
+| `predict_clinical_fusion.py`, `report_followup.py` | Follow-up inference, independent checks and report |
 | `summarize_improvements.py` | Local HTML experiment comparison |
 | `results/` | Small published metric/history/chart snapshots |
 | `examples/clinical.json` | Synthetic clinical input example |

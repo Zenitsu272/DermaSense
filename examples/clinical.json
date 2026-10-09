@@ -1,8 +1,8 @@
 {
   "age": 55,
   "region": "ARM",
-  "itch": "FALSE",
-  "hurt": "FALSE",
-  "bleed": "FALSE",
-  "elevation": "TRUE"
+  "itch": false,
+  "hurt": false,
+  "bleed": false,
+  "elevation": true
 }

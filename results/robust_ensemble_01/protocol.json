@@ -1,0 +1,20 @@
+{
+  "candidates": [
+    "clinical fusion winner",
+    "mixup checkpoint winner",
+    "equal mean of their probabilities"
+  ],
+  "selection": "validation accuracy, macro F1, lower log loss",
+  "weights": [
+    0,
+    0.5,
+    1
+  ],
+  "test_accessed": false,
+  "reason": "Validate complementary predictions from existing and mixup-trained image models; fixed equal averaging, no test-score selection",
+  "fixed_split_sha256": {
+    "train": "175e0a7e98e3b4eff1134621b40d10f88a7265bc6efc5bd25b0bebdf38fca5c9",
+    "val": "ba5d4b61f0fb13826846e4bd63258a1ef9a9be6c269d827ccae386818d8425a9",
+    "test": "a2fd25670c359b541e9012ae2fb0bfd77fafeedf017316c4f726c31c77f9d5f4"
+  }
+}

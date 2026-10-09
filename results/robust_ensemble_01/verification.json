@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "metrics_recomputed": true,
+  "predictions_and_labels_match": true,
+  "no_patient_lesion_or_exact_image_overlap": true,
+  "checkpoint_and_source_hashes_verified": true,
+  "standalone_inference_agrees": true,
+  "correct": 83,
+  "test_images": 96
+}

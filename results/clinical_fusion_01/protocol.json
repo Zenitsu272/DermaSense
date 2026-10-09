@@ -1,0 +1,53 @@
+{
+  "clinical_inputs": [
+    "age",
+    "region",
+    "itch",
+    "hurt",
+    "bleed",
+    "elevation"
+  ],
+  "image_sizes": [
+    224,
+    320
+  ],
+  "seed": 1337,
+  "feature_head_C": [
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "clinical_feature_scales": [
+    0.0,
+    0.1,
+    0.3,
+    1.0,
+    3.0
+  ],
+  "clinical_head_C": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "clinical_probability_blend_weights": [
+    0.1,
+    0.2,
+    0.3,
+    0.4
+  ],
+  "image_views": [
+    "original",
+    "horizontal flip",
+    "vertical flip",
+    "both flips"
+  ],
+  "criterion": "validation accuracy, macro F1, lower log loss",
+  "fixed_split_sha256": {
+    "train": "175e0a7e98e3b4eff1134621b40d10f88a7265bc6efc5bd25b0bebdf38fca5c9",
+    "val": "ba5d4b61f0fb13826846e4bd63258a1ef9a9be6c269d827ccae386818d8425a9",
+    "test": "a2fd25670c359b541e9012ae2fb0bfd77fafeedf017316c4f726c31c77f9d5f4"
+  },
+  "test_policy": "No test rows loaded by search. Same previously inspected benchmark; not independent external validation.",
+  "fit_policy": "Frozen previously trained U-Net/ResNet encoders, CUDA feature extraction, CPU L2-regularized multinomial logistic heads; no test-based thresholds."
+}

@@ -1,0 +1,96 @@
+{
+  "accuracy": 0.8645833333333334,
+  "balanced_accuracy": 0.8652038593215065,
+  "macro_precision": 0.8747795414462081,
+  "macro_recall": 0.8652038593215065,
+  "macro_f1": 0.8638926343844376,
+  "weighted_f1": 0.8622702434177844,
+  "macro_specificity": 0.9310387112102331,
+  "macro_roc_auc_ovr": 0.967980806626414,
+  "log_loss": 0.3550663888454437,
+  "multiclass_brier_score": 0.19383602384584817,
+  "confusion_matrix_rows_true_columns_predicted": [
+    [
+      24,
+      1,
+      2
+    ],
+    [
+      3,
+      25,
+      6
+    ],
+    [
+      0,
+      1,
+      34
+    ]
+  ],
+  "class_order": [
+    "SCC",
+    "SEK",
+    "NEV"
+  ],
+  "per_class": {
+    "SCC": {
+      "precision": 0.8888888888888888,
+      "recall_sensitivity": 0.8888888888888888,
+      "specificity": 0.9565217391304348,
+      "f1": 0.8888888888888888,
+      "roc_auc_ovr": 0.971551261406334,
+      "support_images": 27,
+      "TP": 24,
+      "FP": 3,
+      "TN": 66,
+      "FN": 3
+    },
+    "SEK": {
+      "precision": 0.9259259259259259,
+      "recall_sensitivity": 0.7352941176470589,
+      "specificity": 0.967741935483871,
+      "f1": 0.819672131147541,
+      "roc_auc_ovr": 0.9501897533206831,
+      "support_images": 34,
+      "TP": 25,
+      "FP": 2,
+      "TN": 60,
+      "FN": 9
+    },
+    "NEV": {
+      "precision": 0.8095238095238095,
+      "recall_sensitivity": 0.9714285714285714,
+      "specificity": 0.8688524590163934,
+      "f1": 0.8831168831168831,
+      "roc_auc_ovr": 0.9822014051522249,
+      "support_images": 35,
+      "TP": 34,
+      "FP": 8,
+      "TN": 53,
+      "FN": 1
+    }
+  },
+  "test_images": 96,
+  "test_patients": 68,
+  "correct": 83,
+  "goal_over_90_percent_met": false,
+  "patient_bootstrap_95ci": {
+    "accuracy": {
+      "low": 0.7676767676767676,
+      "high": 0.9434068263726945,
+      "valid_replicates": 1000
+    },
+    "macro_f1": {
+      "low": 0.7629487558831737,
+      "high": 0.9429427128357463,
+      "valid_replicates": 1000
+    },
+    "macro_roc_auc_ovr": {
+      "low": 0.9316432222801755,
+      "high": 0.9930510156039817,
+      "valid_replicates": 1000
+    }
+  },
+  "selected": "followup_previous",
+  "test_note": "Previously inspected test benchmark; not independent external validation.",
+  "validation_note": "Selection score belongs to train-only model, not development refit."
+}

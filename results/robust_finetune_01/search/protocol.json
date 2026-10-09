@@ -1,0 +1,27 @@
+{
+  "seed": 1337,
+  "epochs": 20,
+  "size": 320,
+  "batch": 8,
+  "mixup_alpha": 0.2,
+  "mixup_probability": 0.5,
+  "new_lr": 0.0001,
+  "backbone_lr": 1e-05,
+  "weight_decay": 0.01,
+  "label_smoothing": 0.03,
+  "cosine_T_max": 20,
+  "crop_scale": [
+    0.65,
+    1.0
+  ],
+  "rotation": 30,
+  "clinical_probability_weight_candidates": [
+    0.0,
+    0.1,
+    0.2
+  ],
+  "selection": "four-view validation accuracy, macro F1, lower log loss",
+  "training_images": 479,
+  "base_sha256": "20aa3429bc0a97a1c5c307ff8cdfb9cf3b13f1a68a1fcfd7ae5ab13f9130914f",
+  "test_accessed": false
+}
