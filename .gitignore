@@ -16,6 +16,10 @@
 
 # Environments, credentials and editor files.
 .venv/
+.demo_venv/
+demo/_build/
+demo/test_outputs/
+demo/*.executed.ipynb
 venv/
 __pycache__/
 *.py[cod]

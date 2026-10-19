@@ -6,6 +6,8 @@ DermaSense is a PyTorch term project that combines a clinical photograph with st
 
 The project covers selective dataset download, integrity checks, patient-grouped splitting, clinical preprocessing, GPU training, validation-based model selection, inference and quantitative evaluation.
 
+**Live evaluation:** a [three-cell Jupyter/Colab notebook](demo/README.md) loads the saved model, accepts any number of supplied test images and calculates predictions and metrics live. The prepared local kit includes 20 randomly selected test images with matching clinical records and reference labels. No retraining is required.
+
 **Follow-up experiment:** clinical late fusion, 66 classification-head candidates, stronger augmentation/mixup and an ensemble comparison were also tested. The selected follow-up reached 94.79% validation accuracy but only 86.46% test accuracy. It did not improve the previous 87.50% test result. The earlier model is preserved. See [the complete follow-up protocol and outcome](docs/clinical_fusion.md).
 
 **Measured test accuracy improved from 79.17% to 87.50% (84/96 images).** A separate model-selection experiment reached **93.75% validation accuracy**. The requested test target above 90% was not achieved. These numbers refer to different partitions and must not be interchanged.

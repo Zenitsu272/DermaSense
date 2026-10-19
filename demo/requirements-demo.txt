@@ -1,0 +1,5 @@
+# Install after the project's core requirements on a new local computer.
+notebook>=7,<8
+ipywidgets>=8,<9
+pandas>=2,<4
+nbclient>=0.10,<1
