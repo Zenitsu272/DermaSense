@@ -129,6 +129,7 @@ def main():
     (dest/'DermaSense_Live_Demo.ipynb').write_text(body,encoding='utf-8');(HERE/'DermaSense_Live_Demo.ipynb').write_text(body,encoding='utf-8')
     launcher=f'@echo off\r\ncd /d "%~dp0"\r\n"{args.python.resolve()}" -m notebook DermaSense_Live_Demo.ipynb --ServerApp.ip=127.0.0.1\r\nif errorlevel 1 pause\r\n'
     (dest/'Start_Demo.cmd').write_bytes(launcher.encode('utf-8'))
+    shutil.copy2(HERE/'setup_vscode.py',dest/'setup_vscode.py')
     instructions='''DERMASENSE — LIVE EVALUATION (3 CELLS)
 
 FASTEST OPTION: LOCAL JUPYTER, ALREADY PREPARED ON THIS COMPUTER

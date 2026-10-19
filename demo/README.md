@@ -46,6 +46,24 @@ It verifies the original checkpoint hash, exports a tensor-only inference packag
 
 For local setup on a new computer, install core requirements and `demo/requirements-demo.txt` into a virtual environment, then run Jupyter from the generated folder. The generated Windows launcher points at the `--python` environment specified when building; use a normal Jupyter launch on other computers or operating systems.
 
+## VS Code setup and kernel selection
+
+Install the Microsoft Python and Jupyter extensions. Use **File > Open Folder** to open the generated evaluation folder; opening only the notebook does not apply that folder's interpreter settings.
+
+Register the prepared environment (the same Python used to build and test the kit):
+
+```powershell
+python demo/setup_vscode.py --demo-dir PATH_TO_DOWNLOADS/DermaSense_Evaluation --python PATH_TO_JUPYTER_PYTHON
+```
+
+The setup checks dependencies, registers **DermaSense Demo (GPU)**, adds folder-specific interpreter settings and creates `Start_VSCode.cmd`. It preserves the notebook's three cells and any saved outputs. The generated kit also contains a copy of this setup script. The launcher requires the `code` command on PATH; alternatively open the folder from VS Code itself.
+
+In the notebook's top-right kernel menu, select **Select Another Kernel > Jupyter Kernel > DermaSense Demo (GPU)**. If the menu is hidden, use **Ctrl+Shift+P > Notebook: Select Notebook Kernel**. Reload the window if the newly registered kernel has not appeared. Run cell 1 once, then cells 2 and 3 for each image batch. GPU selection is automatic; CPU fallback is supported.
+
+If cell 1 shows `CalledProcessError` from a path containing `spyder-6`, the notebook is using Spyder's separate environment. Select the registered DermaSense kernel instead. Registering a kernel or setting the default interpreter does not override a kernel that VS Code already selected for an open notebook.
+
+The GitHub folder contains the clean notebook, runtime, builder, setup script and tests. Model weights, demo images, clinical records, local environments and generated outputs remain in the local evaluation kit. A fresh clone requires building or supplying that kit before inference.
+
 ## Verification
 
 ```powershell
